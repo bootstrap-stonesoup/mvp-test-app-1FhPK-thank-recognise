@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-xbha
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:76e01924ad569bd9542f1437a72d1fa4173a4f9be7011888676bcf31048f875e
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
